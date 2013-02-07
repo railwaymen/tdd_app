@@ -3,6 +3,7 @@ require "spec_helper"
 describe UsersController do
 
   let!(:user) { User.create(name: "jon", email: "jon@example.com" ) }
+  let!(:user) { FactoryGirl.create :user }
 
   describe "GET #show" do
     it "should return user" do
